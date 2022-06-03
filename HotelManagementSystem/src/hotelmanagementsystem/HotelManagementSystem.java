@@ -17,6 +17,7 @@ public class HotelManagementSystem {
         System.out.print("Hello world");
         System.out.print("Hello pelin");
         System.out.println("123123myşifre");
+        aas
     }
     
 }
