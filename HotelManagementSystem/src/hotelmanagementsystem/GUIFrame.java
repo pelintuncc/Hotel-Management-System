@@ -45,11 +45,13 @@ public class GUIFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jPasswordField2 = new javax.swing.JPasswordField();
+        jButton5 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jPasswordField3 = new javax.swing.JPasswordField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 360));
@@ -57,7 +59,7 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setBackground(new java.awt.Color(255, 255, 204));
         jButton1.setText("Customer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,7 +67,7 @@ public class GUIFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setText("Staff");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +75,7 @@ public class GUIFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setBackground(new java.awt.Color(255, 255, 204));
         jButton3.setText("Administration");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,12 +109,20 @@ public class GUIFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 360));
 
-        jPasswordField1.setText("jPasswordField1");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Customer ID");
 
         jLabel5.setText("Password");
 
+        jButton4.setBackground(new java.awt.Color(255, 153, 0));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Login");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,12 +156,14 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(jButton4)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel6.setText("Password");
 
@@ -163,7 +175,20 @@ public class GUIFrame extends javax.swing.JFrame {
             }
         });
 
-        jPasswordField2.setText("jPasswordField1");
+        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setBackground(new java.awt.Color(255, 153, 0));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Login");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -172,6 +197,7 @@ public class GUIFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(114, 114, 114)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton5)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -190,18 +216,33 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton5)
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab2", jPanel2);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel8.setText("Password");
 
         jLabel9.setText("Administrator ID");
 
-        jTextField3.setText("jTextField1");
+        jPasswordField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField3ActionPerformed(evt);
+            }
+        });
 
-        jPasswordField3.setText("jPasswordField1");
+        jButton6.setBackground(new java.awt.Color(255, 153, 0));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Login");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -210,6 +251,7 @@ public class GUIFrame extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(114, 114, 114)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -228,7 +270,9 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton6)
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", jPanel5);
@@ -270,7 +314,7 @@ public class GUIFrame extends javax.swing.JFrame {
             while(scan.hasNextLine()) {
                 String line = scan.nextLine();
                 String userData[] = line.split(",");
-                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("0")) {
+                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("2")) {
                     System.out.println("Success.");
                     break;
                 }
@@ -283,6 +327,71 @@ public class GUIFrame extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        String tempID = jTextField1.getText();
+        char[] pass = jPasswordField1.getPassword();
+        String password = new String(pass);
+    
+        try {
+            File file = new File("src/hotelmanagementsystem/UserData.txt");
+            Scanner scan = new Scanner(file);
+            System.out.println(scan.nextLine());
+            while(scan.hasNextLine()) {
+                String line = scan.nextLine();
+                String userData[] = line.split(",");
+                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("1")) {
+                    System.out.println("Success.");
+                    break;
+                }
+                else {
+                    System.out.println("Failed login.");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Cannot access user data.");
+        }
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        String tempID = jTextField1.getText();
+        char[] pass = jPasswordField1.getPassword();
+        String password = new String(pass);
+    
+        try {
+            File file = new File("src/hotelmanagementsystem/UserData.txt");
+            Scanner scan = new Scanner(file);
+            System.out.println(scan.nextLine());
+            while(scan.hasNextLine()) {
+                String line = scan.nextLine();
+                String userData[] = line.split(",");
+                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("0")) {
+                    System.out.println("Success.");
+                    break;
+                }
+                else {
+                    System.out.println("Failed login.");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Cannot access user data.");
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
+
+    private void jPasswordField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,6 +433,8 @@ public class GUIFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
