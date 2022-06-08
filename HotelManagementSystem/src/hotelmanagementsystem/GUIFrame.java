@@ -104,7 +104,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 360));
@@ -122,7 +122,6 @@ public class GUIFrame extends javax.swing.JFrame {
         jLabel5.setText("Password");
 
         jButton4.setBackground(new java.awt.Color(255, 153, 0));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Login");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +157,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton4)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jPanel1);
@@ -182,7 +181,6 @@ public class GUIFrame extends javax.swing.JFrame {
         });
 
         jButton5.setBackground(new java.awt.Color(255, 153, 0));
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Login");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,7 +216,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab2", jPanel2);
@@ -236,7 +234,6 @@ public class GUIFrame extends javax.swing.JFrame {
         });
 
         jButton6.setBackground(new java.awt.Color(255, 153, 0));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Login");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,7 +269,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton6)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", jPanel5);
