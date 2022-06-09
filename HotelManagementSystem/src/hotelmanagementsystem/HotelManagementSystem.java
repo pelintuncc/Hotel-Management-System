@@ -15,6 +15,7 @@ public class HotelManagementSystem {
      */
     static CustomerFrame cf;
     static ManagementFrame mf;
+    static GUIFrame loginFrame;
     
     public static void main(String[] args) {
         GUIFrame gui = new GUIFrame();
@@ -33,6 +34,11 @@ public class HotelManagementSystem {
             mf.setVisible(true);
         }
         
+    }
+    
+    public static void logout() {
+        loginFrame = new GUIFrame();
+        loginFrame.setVisible(true); 
     }
     
 }

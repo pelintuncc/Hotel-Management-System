@@ -50,10 +50,7 @@ public class ManagementFrame extends javax.swing.JFrame {
         jPanel44 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jPanel45 = new javax.swing.JPanel();
         jPanel46 = new javax.swing.JPanel();
@@ -74,6 +71,11 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jButton11.setBackground(new java.awt.Color(255, 204, 102));
         jButton11.setText("Logout");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,9 +84,9 @@ public class ManagementFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(316, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(220, 220, 220)
+                .addGap(199, 199, 199)
                 .addComponent(jButton11)
-                .addContainerGap())
+                .addGap(27, 27, 27))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,25 +272,13 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jPanel44.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 6, 440, 108));
 
-        jButton6.setBackground(new java.awt.Color(153, 204, 255));
-        jButton6.setText("See their message");
-        jPanel44.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, -1, 20));
-
         jButton7.setBackground(new java.awt.Color(153, 204, 255));
-        jButton7.setText("See their message");
-        jPanel44.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, 20));
-
-        jButton8.setBackground(new java.awt.Color(153, 204, 255));
-        jButton8.setText("See their message");
-        jPanel44.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, 20));
-
-        jButton9.setBackground(new java.awt.Color(153, 204, 255));
-        jButton9.setText("See their message");
-        jPanel44.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, 20));
+        jButton7.setText("View message");
+        jPanel44.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 120, 20));
 
         jButton10.setBackground(new java.awt.Color(204, 204, 255));
         jButton10.setText("Send Gift");
-        jPanel44.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 100, 30));
+        jPanel44.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 60, 120, 30));
 
         jTabbedPane9.addTab("All", jPanel44);
 
@@ -376,6 +366,12 @@ public class ManagementFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        HotelManagementSystem.logout();
+        this.dispose();
+    }//GEN-LAST:event_jButton11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -419,10 +415,7 @@ public class ManagementFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

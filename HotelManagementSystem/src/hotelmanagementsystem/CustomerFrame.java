@@ -33,11 +33,11 @@ public class CustomerFrame extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         orderPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        foodScroll = new javax.swing.JScrollPane();
+        foodTable = new javax.swing.JTable();
+        clearButton = new javax.swing.JButton();
+        addButton = new javax.swing.JButton();
+        removeButton = new javax.swing.JButton();
         contactPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,19 +91,20 @@ public class CustomerFrame extends javax.swing.JFrame {
 
         orderPanel.setBackground(new java.awt.Color(255, 255, 204));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0), 3));
 
-        jTable2.setBackground(new java.awt.Color(255, 255, 255));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        foodTable.setBackground(new java.awt.Color(255, 255, 204));
+        foodTable.setForeground(new java.awt.Color(0, 0, 0));
+        foodTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"Hamburger",  new Float(3.0),  new Integer(0),  new Float(0.0)},
+                {"Apple",  new Float(1.0),  new Integer(0),  new Float(0.0)},
+                {"Water",  new Float(1.0),  new Integer(0),  new Float(0.0)},
+                {"Cake",  new Float(2.0),  new Integer(0),  new Float(0.0)}
             },
             new String [] {
-                "Food name", "Unit price", "Count", "Price"
+                "Food name", "Unit price ($)", "Count", "Price"
             }
         ) {
             Class[] types = new Class [] {
@@ -114,22 +115,36 @@ public class CustomerFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable2.setShowGrid(true);
-        jScrollPane2.setViewportView(jTable2);
+        foodTable.setDoubleBuffered(true);
+        foodTable.setShowGrid(true);
+        foodScroll.setViewportView(foodTable);
 
-        jButton3.setText("Clear");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        clearButton.setBackground(new java.awt.Color(255, 255, 204));
+        clearButton.setText("Clear");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                clearButtonActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Add");
+        addButton.setBackground(new java.awt.Color(255, 255, 204));
+        addButton.setText("Add");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Remove");
-        jButton2.setMaximumSize(new java.awt.Dimension(72, 22));
-        jButton2.setMinimumSize(new java.awt.Dimension(72, 22));
-        jButton2.setPreferredSize(new java.awt.Dimension(72, 22));
+        removeButton.setBackground(new java.awt.Color(255, 255, 204));
+        removeButton.setText("Remove");
+        removeButton.setMaximumSize(new java.awt.Dimension(72, 22));
+        removeButton.setMinimumSize(new java.awt.Dimension(72, 22));
+        removeButton.setPreferredSize(new java.awt.Dimension(72, 22));
+        removeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -137,13 +152,13 @@ public class CustomerFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(foodScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                    .addComponent(removeButton, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(addButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(clearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,15 +166,15 @@ public class CustomerFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(foodScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(removeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6))
+                        .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout orderPanelLayout = new javax.swing.GroupLayout(orderPanel);
@@ -169,14 +184,14 @@ public class CustomerFrame extends javax.swing.JFrame {
             .addGroup(orderPanelLayout.createSequentialGroup()
                 .addGap(74, 74, 74)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         orderPanelLayout.setVerticalGroup(
             orderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(orderPanelLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", orderPanel);
@@ -208,8 +223,7 @@ public class CustomerFrame extends javax.swing.JFrame {
 
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
         // TODO add your handling code here:
-        GUIFrame loginFrame = new GUIFrame();
-        loginFrame.setVisible(true); 
+        HotelManagementSystem.logout();
         this.dispose();
     }//GEN-LAST:event_logoutButtonActionPerformed
 
@@ -218,9 +232,35 @@ public class CustomerFrame extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_orderButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        int index = foodTable.getSelectedRow();
+        foodTable.setValueAt(new Integer(0),index,2);
+        foodTable.setValueAt(new Float(0),index,3);
+    }//GEN-LAST:event_clearButtonActionPerformed
+
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+        // TODO add your handling code here:
+        int index = foodTable.getSelectedRow();
+        Integer prev = (Integer)foodTable.getValueAt(index, 2);
+        foodTable.setValueAt(new Integer(prev + 1),index,2);
+        Float unitPrice1 = (Float)foodTable.getValueAt(index, 1);
+        Float price1 = (Float)foodTable.getValueAt(index, 3);
+        foodTable.setValueAt(new Float(price1 + unitPrice1),index,3);
+    }//GEN-LAST:event_addButtonActionPerformed
+
+    private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
+        // TODO add your handling code here:
+        int index = foodTable.getSelectedRow();
+        Integer prev = (Integer)foodTable.getValueAt(index, 2);
+        if (prev - 1 >= 0) {
+            foodTable.setValueAt(new Integer(prev - 1),index,2);
+            Float unitPrice2 = (Float)foodTable.getValueAt(index, 1);
+            Float price2 = (Float)foodTable.getValueAt(index, 3);
+            foodTable.setValueAt(new Float(price2 - unitPrice2),index,3);
+        }
+        
+    }//GEN-LAST:event_removeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,18 +298,18 @@ public class CustomerFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addButton;
     private javax.swing.JPanel buttonPanel;
+    private javax.swing.JButton clearButton;
     private javax.swing.JButton contactButton;
     private javax.swing.JPanel contactPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JScrollPane foodScroll;
+    private javax.swing.JTable foodTable;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JButton logoutButton;
     private javax.swing.JButton orderButton;
     private javax.swing.JPanel orderPanel;
+    private javax.swing.JButton removeButton;
     // End of variables declaration//GEN-END:variables
 }
