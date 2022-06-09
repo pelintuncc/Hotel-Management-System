@@ -28,6 +28,7 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -53,6 +54,7 @@ public class ManagementFrame extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jPanel45 = new javax.swing.JPanel();
         jPanel46 = new javax.swing.JPanel();
         jPanel47 = new javax.swing.JPanel();
@@ -70,6 +72,9 @@ public class ManagementFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel1.setText("Management");
 
+        jButton11.setBackground(new java.awt.Color(255, 204, 102));
+        jButton11.setText("Logout");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -77,13 +82,17 @@ public class ManagementFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(316, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(298, 298, 298))
+                .addGap(220, 220, 220)
+                .addComponent(jButton11)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11))
                 .addContainerGap())
         );
 
@@ -135,12 +144,12 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
+                {"Pelin", "Tunç", "555-555", "HouseKeeper", "asdfg@hotmail.com", "-"},
+                {"Selin", "Tuna", "555-555", "LifeGuard", "asdfg@hotmail.com", "-"},
+                {"Berk", "Tusa", "555-555", "RestaurantManager", "asdfg@hotmail.com", "-"},
+                {"Bersay", "Yakıcı", "555-555", "Chef", "asdfg@hotmail.com", "-"},
+                {"Yiğit", "İre", "555-555", "Recepcionist", "asdfg@hotmail.com", "-"},
+                {"Efe", "İren", "555-555", "BellBoy", "asdfg@hotmail.com", null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null}
@@ -153,7 +162,7 @@ public class ManagementFrame extends javax.swing.JFrame {
         jTable2.setShowGrid(true);
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 6, 570, 210));
+        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 6, 570, 150));
 
         jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setText("Warn!");
@@ -182,13 +191,13 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {"Pelin", "Tunç", "555-555", "asdfg@hotmail.com", "-", "101", "$1000"},
+                {"Bersay", "Yakıcı", "555-555", "asdfg@hotmail.com", "-", "102", "$1000"},
+                {"Yiğit", "İren", "555-555", "asdfg@hotmail.com", "-", "103", "$1000"},
+                {"Efe", "İren", "555-555", "asdfg@hotmail.com", "-", "104", "$1000"},
+                {"Berk", "Tunç", "555-555", "asdfg@hotmail.com", "-", "105", "$1000"},
+                {"Ege", "Yıldız", "555-555", "asdfg@hotmail.com", "-", "106", "$1000"},
+                {"Can", "Yıldız", "555-555", "asdfg@hotmail.com", "-", "107", "$1000"}
             },
             new String [] {
                 "Name", "Surname", "Phone Number", "Mail Address", "Address", "Room Number", "Charge"
@@ -261,17 +270,25 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jPanel44.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 6, 440, 108));
 
+        jButton6.setBackground(new java.awt.Color(153, 204, 255));
         jButton6.setText("See their message");
         jPanel44.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, -1, 20));
 
+        jButton7.setBackground(new java.awt.Color(153, 204, 255));
         jButton7.setText("See their message");
         jPanel44.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, 20));
 
+        jButton8.setBackground(new java.awt.Color(153, 204, 255));
         jButton8.setText("See their message");
         jPanel44.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, 20));
 
+        jButton9.setBackground(new java.awt.Color(153, 204, 255));
         jButton9.setText("See their message");
         jPanel44.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, 20));
+
+        jButton10.setBackground(new java.awt.Color(204, 204, 255));
+        jButton10.setText("Send Gift");
+        jPanel44.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 100, 30));
 
         jTabbedPane9.addTab("All", jPanel44);
 
@@ -396,6 +413,8 @@ public class ManagementFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
