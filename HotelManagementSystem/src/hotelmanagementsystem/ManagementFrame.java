@@ -48,9 +48,9 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(660, 395));
-        setPreferredSize(new java.awt.Dimension(660, 395));
-        setSize(new java.awt.Dimension(660, 395));
+        setMinimumSize(new java.awt.Dimension(760, 430));
+        setPreferredSize(new java.awt.Dimension(760, 430));
+        setSize(new java.awt.Dimension(760, 430));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 51));
@@ -63,9 +63,9 @@ public class ManagementFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(263, Short.MAX_VALUE)
+                .addContainerGap(316, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(251, 251, 251))
+                .addGap(298, 298, 298))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,7 +75,7 @@ public class ManagementFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 50));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 50));
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 204, 102));
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -86,15 +86,15 @@ public class ManagementFrame extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"101", "Double",  new Boolean(false), null, null, null, null},
-                {"102", "Single", null, null, null, null, null},
-                {"103", "Queen", null, null, null, null, null},
-                {"104", "Double", null, null, null, null, null},
-                {"105", "Single", null, null, null, null, null},
-                {"106", "Queen", null, null, null, null, null},
-                {"107", "King", null, null, null, null, null},
-                {"108", "Double", null, null, null, null, null},
-                {"109", "Single", null, null, null, null, null}
+                {"101", "Double",  new Boolean(true),  new Boolean(true), "Ayşe Temiz", "23/05/2022 15.55", "Pelin Tunç"},
+                {"102", "Single",  new Boolean(true),  new Boolean(true), "Ahmet Temiz", "23/05/2022 15.55", "Yiğit Efe İren"},
+                {"103", "Queen",  new Boolean(true),  new Boolean(true), "Ayşe Temiz", "23/05/2022 15.55", "Ahmet Arslan"},
+                {"104", "Double", null,  new Boolean(true), "Ayşe Temiz", "23/05/2022 15.55", "Bersay Yakıcı"},
+                {"105", "Single", null,  new Boolean(true), "Ahmet Temiz", "23/05/2022 15.55", "-"},
+                {"106", "Queen",  new Boolean(true), null, "-", "-", "-"},
+                {"107", "King", null,  new Boolean(true), "Ayşe Temiz", "23/05/2022 15.55", "-"},
+                {"108", "Double", null, null, "-", "-", "-"},
+                {"109", "Single",  new Boolean(true), null, "-", "-", null}
             },
             new String [] {
                 "Room Number", "Bed", "Empty", "Cleaned", "Last Cleaner", "Cleaning Time", "Last Customer"
@@ -114,7 +114,7 @@ public class ManagementFrame extends javax.swing.JFrame {
         jTable1.setShowGrid(true);
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 493, 212));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 610, 210));
 
         jTabbedPane1.addTab("Rooms", jPanel4);
 
@@ -141,7 +141,7 @@ public class ManagementFrame extends javax.swing.JFrame {
         jTable2.setShowGrid(true);
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 6, -1, 210));
+        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 6, 570, 210));
 
         jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setText("Warn!");
@@ -151,17 +151,17 @@ public class ManagementFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 120, -1));
+        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 120, -1));
 
         jButton2.setBackground(new java.awt.Color(153, 204, 255));
         jButton2.setText("Write an e-mail");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 120, -1));
+        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 120, -1));
 
         jButton3.setBackground(new java.awt.Color(153, 204, 255));
         jButton3.setText("Delete account");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel5.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 120, -1));
+        jPanel5.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 120, -1));
 
         jTabbedPane1.addTab("Staff", jPanel5);
 
@@ -186,7 +186,7 @@ public class ManagementFrame extends javax.swing.JFrame {
         jTable3.setShowGrid(true);
         jScrollPane3.setViewportView(jTable3);
 
-        jPanel3.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 6, -1, 170));
+        jPanel3.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 6, 600, 170));
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
         jButton4.setText("Write an e-mail");
@@ -211,11 +211,11 @@ public class ManagementFrame extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 499, Short.MAX_VALUE)
+            .addGap(0, 619, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 304, Short.MAX_VALUE)
+            .addGap(0, 314, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Complains", jPanel6);
@@ -226,27 +226,27 @@ public class ManagementFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 499, Short.MAX_VALUE)
+            .addGap(0, 619, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 304, Short.MAX_VALUE)
+            .addGap(0, 314, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Reviews", jPanel2);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 630, 310));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 750, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
