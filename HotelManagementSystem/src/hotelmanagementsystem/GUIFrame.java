@@ -39,19 +39,19 @@ public class GUIFrame extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        customerLoginButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jPasswordField2 = new javax.swing.JPasswordField();
-        jButton5 = new javax.swing.JButton();
+        staffLoginButton = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jPasswordField3 = new javax.swing.JPasswordField();
-        jButton6 = new javax.swing.JButton();
+        adminLoginButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 360));
@@ -121,11 +121,11 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Password");
 
-        jButton4.setBackground(new java.awt.Color(255, 153, 0));
-        jButton4.setText("Login");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        customerLoginButton.setBackground(new java.awt.Color(255, 153, 0));
+        customerLoginButton.setText("Login");
+        customerLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                customerLoginButtonActionPerformed(evt);
             }
         });
 
@@ -136,13 +136,13 @@ public class GUIFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(114, 114, 114)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
+                    .addComponent(customerLoginButton)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPasswordField1)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +156,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(customerLoginButton)
                 .addContainerGap(117, Short.MAX_VALUE))
         );
 
@@ -180,11 +180,11 @@ public class GUIFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(255, 153, 0));
-        jButton5.setText("Login");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        staffLoginButton.setBackground(new java.awt.Color(255, 153, 0));
+        staffLoginButton.setText("Login");
+        staffLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                staffLoginButtonActionPerformed(evt);
             }
         });
 
@@ -195,13 +195,13 @@ public class GUIFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(114, 114, 114)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
+                    .addComponent(staffLoginButton)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPasswordField2)
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,7 +215,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(staffLoginButton)
                 .addContainerGap(117, Short.MAX_VALUE))
         );
 
@@ -233,11 +233,11 @@ public class GUIFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(255, 153, 0));
-        jButton6.setText("Login");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        adminLoginButton.setBackground(new java.awt.Color(255, 153, 0));
+        adminLoginButton.setText("Login");
+        adminLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                adminLoginButtonActionPerformed(evt);
             }
         });
 
@@ -248,13 +248,13 @@ public class GUIFrame extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(114, 114, 114)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6)
+                    .addComponent(adminLoginButton)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPasswordField3)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,13 +268,13 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(adminLoginButton)
                 .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", jPanel5);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, -40, -1, 400));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, -40, 640, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -298,65 +298,7 @@ public class GUIFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        String tempID = jTextField1.getText();
-        char[] pass = jPasswordField1.getPassword();
-        String password = new String(pass);
-    
-        try {
-            File file = new File("src/hotelmanagementsystem/UserData.txt");
-            Scanner scan = new Scanner(file);
-            System.out.println(scan.nextLine());
-            while(scan.hasNextLine()) {
-                String line = scan.nextLine();
-                String userData[] = line.split(",");
-                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("2")) {
-                    System.out.println("Success.");
-                    break;
-                }
-                else {
-                    System.out.println("Failed login.");
-                }
-            }
-        } catch (Exception e) {
-            System.out.println("Cannot access user data.");
-        }
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        String tempID = jTextField1.getText();
-        char[] pass = jPasswordField1.getPassword();
-        String password = new String(pass);
-    
-        try {
-            File file = new File("src/hotelmanagementsystem/UserData.txt");
-            Scanner scan = new Scanner(file);
-            System.out.println(scan.nextLine());
-            while(scan.hasNextLine()) {
-                String line = scan.nextLine();
-                String userData[] = line.split(",");
-                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("1")) {
-                    System.out.println("Success.");
-                    break;
-                }
-                else {
-                    System.out.println("Failed login.");
-                }
-            }
-        } catch (Exception e) {
-            System.out.println("Cannot access user data.");
-        }
-        
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void customerLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerLoginButtonActionPerformed
         // TODO add your handling code here:
         String tempID = jTextField1.getText();
         char[] pass = jPasswordField1.getPassword();
@@ -380,7 +322,65 @@ public class GUIFrame extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println("Cannot access user data.");
         }
-    }//GEN-LAST:event_jButton6ActionPerformed
+        
+    }//GEN-LAST:event_customerLoginButtonActionPerformed
+
+    private void staffLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffLoginButtonActionPerformed
+        // TODO add your handling code here:
+        String tempID = jTextField2.getText();
+        char[] pass = jPasswordField2.getPassword();
+        String password = new String(pass);
+    
+        try {
+            File file = new File("src/hotelmanagementsystem/UserData.txt");
+            Scanner scan = new Scanner(file);
+            System.out.println(scan.nextLine());
+            while(scan.hasNextLine()) {
+                String line = scan.nextLine();
+                String userData[] = line.split(",");
+                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("1")) {
+                    System.out.println("Success.");
+                    break;
+                }
+                else {
+                    System.out.println("Failed login.");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Cannot access user data.");
+        }
+        
+    }//GEN-LAST:event_staffLoginButtonActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void adminLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginButtonActionPerformed
+        // TODO add your handling code here:
+        String tempID = jTextField3.getText();
+        char[] pass = jPasswordField3.getPassword();
+        String password = new String(pass);
+    
+        try {
+            File file = new File("src/hotelmanagementsystem/UserData.txt");
+            Scanner scan = new Scanner(file);
+            System.out.println(scan.nextLine());
+            while(scan.hasNextLine()) {
+                String line = scan.nextLine();
+                String userData[] = line.split(",");
+                if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("2")) {
+                    System.out.println("Success.");
+                    break;
+                }
+                else {
+                    System.out.println("Failed login.");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Cannot access user data.");
+        }
+    }//GEN-LAST:event_adminLoginButtonActionPerformed
 
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
         // TODO add your handling code here:
@@ -426,12 +426,11 @@ public class GUIFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton adminLoginButton;
+    private javax.swing.JButton customerLoginButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -449,5 +448,6 @@ public class GUIFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton staffLoginButton;
     // End of variables declaration//GEN-END:variables
 }
