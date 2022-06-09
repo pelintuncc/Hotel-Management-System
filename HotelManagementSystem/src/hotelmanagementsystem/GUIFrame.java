@@ -313,6 +313,8 @@ public class GUIFrame extends javax.swing.JFrame {
                 String userData[] = line.split(",");
                 if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("0")) {
                     System.out.println("Success.");
+                    HotelManagementSystem.authenticate("customer");
+                    this.dispose();
                     break;
                 }
                 else {
@@ -340,6 +342,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 String userData[] = line.split(",");
                 if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("1")) {
                     System.out.println("Success.");
+                    HotelManagementSystem.authenticate("staff");
                     break;
                 }
                 else {
@@ -371,6 +374,8 @@ public class GUIFrame extends javax.swing.JFrame {
                 String userData[] = line.split(",");
                 if(tempID.equals(userData[0]) && password.equals(userData[1]) && userData[2].equals("2")) {
                     System.out.println("Success.");
+                    HotelManagementSystem.authenticate("admin");
+                    this.dispose();
                     break;
                 }
                 else {
